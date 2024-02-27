@@ -12,6 +12,7 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const HeroContainer = styled.div`
   display: flex;
@@ -137,7 +138,7 @@ const ResumeButton = styled.a`
   text-decoration: none;
 
   width: 95%;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
   padding: 16px 0;
 
@@ -229,7 +230,14 @@ const Hero = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I am <br /> {Bio.name}
+                  Hi, I am <br /> 
+                  <FancyText
+                  gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+                  animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+                  animateDuration={2000}
+                  >
+                    Mohammed Ahmed Majid
+                  </FancyText>
                 </Title>
                 <TextLoop>
                   I am a

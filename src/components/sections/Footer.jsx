@@ -5,6 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -88,7 +89,15 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Ahmed Majid</Logo>
+        <Logo>
+        <FancyText
+      gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+      animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+      animateDuration={2000}
+    >
+      Ahmed Majid
+    </FancyText>
+        </Logo>
         <Nav>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
