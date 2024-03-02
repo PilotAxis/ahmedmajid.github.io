@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { projects } from "../../data/constants";
 import ProjectCard from "../cards/ProjectCard";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const Container = styled.div`
 margin-top: 100px;
@@ -98,7 +99,15 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="Projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <Title>
+          <FancyText
+      gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+      animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+      animateDuration={2000}
+    >
+      Projects
+    </FancyText>
+    </Title>
         <Desc
           style={{
             marginBottom: "40px",

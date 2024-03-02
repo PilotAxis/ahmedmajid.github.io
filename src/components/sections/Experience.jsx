@@ -4,6 +4,7 @@ import { experiences } from "../../data/constants";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import ExperienceCard from "../cards/ExperienceCard";
+import FancyText from '@carefully-coded/react-text-gradient'
 
 const Container = styled.div`
 margin-top: 100px;
@@ -54,7 +55,15 @@ const Experience = () => {
   return (
     <Container id="Experience">
       <Wrapper>
-        <Title>Experience</Title>
+        <Title>
+          <FancyText
+        gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+        animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+        animateDuration={2000}
+      >
+        Experience
+        </FancyText>
+        </Title>
         <Desc
           style={{
             marginBottom: "40px",

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
 import { Tilt } from "react-tilt";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const Container = styled.div`
 display: flex;
@@ -121,7 +122,15 @@ const Skills = () => {
   return (
     <Container id="Skills">
       <Wrapper>
-        <Title>Skills</Title>
+        <Title>
+        <FancyText
+      gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+      animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+      animateDuration={2000}
+    >
+      Skills
+    </FancyText>
+        </Title>
         <Desc
           style={{
             marginBottom: "40px",

@@ -4,6 +4,7 @@ import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const Container = styled.div`
 margin-top: 100px;
@@ -54,7 +55,15 @@ const Education = () => {
   return (
     <Container id="Education">
       <Wrapper>
-        <Title>Education</Title>
+        <Title>
+    <FancyText
+      gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+      animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+      animateDuration={2000}
+    >
+      Education
+    </FancyText>
+    </Title>
         <Desc
           style={{
             marginBottom: "40px",

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import EarthCanvas from "../canvas/Earth";
+import FancyText from '@carefully-coded/react-text-gradient';
 
 const Container = styled.div`
   display: flex;
@@ -134,13 +135,12 @@ const Contact = () => {
       .sendForm(
         "service_sjfs1ti",
         "template_md51jvp",
-        form.current,
+        e.target,
         "GqERK2sQag6gitM-I"
       )
       .then(
         (result) => {
           alert("Message Sent");
-          form.current.resut();
         },
         (error) => {
           alert(error);
@@ -152,7 +152,15 @@ const Contact = () => {
     <Container>
       <Wrapper>
         <EarthCanvas />
-        <Title>Contact</Title>
+        <Title>
+        <FancyText
+      gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
+      animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
+      animateDuration={2000}
+    >
+      Contact
+    </FancyText>
+        </Title>
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
