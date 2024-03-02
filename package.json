@@ -4,6 +4,7 @@
   "homepage": "https://ahmedmajid.github.io",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@carefully-coded/react-text-gradient": "^1.0.6",
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.3",
